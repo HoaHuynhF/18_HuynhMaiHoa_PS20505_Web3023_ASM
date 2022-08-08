@@ -1,0 +1,51 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- Nhúng file CSS -->
+    <link rel="stylesheet" href="./css/dangky_dangnhap.css" />
+</head>
+
+<body background="./images/animegirls-1647586724436-7401.jpg">
+    <form action="" class="login-form">
+        <div class="register">
+            <h1>Đăng Nhập</h1>
+            <p>Vui lòng điền thông tin để đăng nhập</p>
+            <hr>
+            <label for="username"><b>Tên đăng nhập</b></label>
+            <input type="text" placeholder="Họ và tên" name="username" id="txtUserName">
+            <label for="password"><b>Mật khẩu</b></label>
+            <input type="password" placeholder="******" name="password" id="txtPassWord">
+            <input type="checkbox" id="checkID">Lưu thông tin.
+            <hr>
+            <input type="button" class="submit" value="Đăng nhập" onclick="luuTT();">
+        </div>
+        <div class="register login">
+            <p>Bạn chưa có tài khoản rồi? <a href="dangky.html">Đăng ký</a>.</p>
+        </div>
+    </form>
+</body>
+
+</html>
+<script> // này là nhớ tài khoản 
+    function loadInfo() {
+        document.getElementById("txtUserName").value = localStorage.getItem("username");
+        document.getElementById("txtPassWord").value = localStorage.getItem("password");
+    }
+    function luuTT() {
+        var userN = document.getElementById("txtUserName").value;
+        var passW = document.getElementById("txtPassWord").value;
+        var isChecked = document.getElementById("checkID").checked;
+        localStorage.clear();
+        if (isChecked == true) {
+            localStorage.setItem("username", userN);
+            localStorage.setItem("password", passW);
+            localStorage.setItem("check", isChecked);
+        }
+        else {
+            localStorage.setItem("username", "");
+            localStorage.setItem("password", "");
+            localStorage.setItem("check", "false");
+        }
+    }
+</script>

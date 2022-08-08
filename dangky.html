@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhúng file CSS -->
+    <link rel="stylesheet" href="./css/dangky_dangnhap.css" />
+    <!-- Nhúng file JavaScript -->
+    <script language="javascript" src="./js/Register.js"></script>
+</head>
+<body background="./images/animegirls-1647586724436-7401.jpg">
+    <form action="" class="register-form">
+        <div class="register">
+            <h1>Đăng ký</h1>
+            <p>Vui lòng điền thông tin để đăng ký</p>
+            <hr>
+            <label><b>Tên đăng nhập</b></label>
+            <input type="text" placeholder="Họ và tên" name="username" id="txtUser">
+            <br>
+                    <p><span id="errUser"></span></p>
+
+            <label><b>Mật khẩu</b></label>
+            <input type="password" placeholder="******" name="password" id="txtPass">
+            <br>
+                    <span id="errPass"></span>
+
+            <label><b>Nhập lại mật khẩu</b></label>
+            <input type="password" placeholder="******" name="password-repeat" id="txtRepass">
+            <br>
+                    <span id="errRepass"></span>
+
+            <label><br>Email</br></label>
+            <input type="text" placeholder="Email@....com" id="txtEmail" onkeyup="isEmail();">
+            <br>
+                    <span id="errEmail"></span>
+
+            <hr>
+            <input type="button" class="submit" value="register" onclick="fValid();">
+        </div>
+        <div class="register login">
+            <p>Bạn đã có tài khoản rồi? <a href="dangnhap.html">Đăng nhập</a>.</p>
+        </div>
+    </form>
+</body>
+</html>
+
+    
+    
